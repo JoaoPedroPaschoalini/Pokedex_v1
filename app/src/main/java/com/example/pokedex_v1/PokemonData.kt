@@ -1,5 +1,7 @@
 package com.example.pokedex_v1
 
+
+//data class com mocks de poekemons
 data class Evolution(
     val pokemonName: String,
     val requirement: String,

@@ -3,6 +3,7 @@ package com.example.pokedex_v1
 import android.os.Bundle
 import android.view.Gravity
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -25,10 +26,11 @@ class DetailActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Detalhes do Pokémon"
 
-        val btnVoltar = findViewById<Button>(R.id.btnVoltar)
+        val btnVoltar = findViewById<ImageButton>(R.id.btnVoltar)
 
+        // Fecha a Activity atual e retorna à tela anterior
         btnVoltar.setOnClickListener {
-            finish() // Fecha a Activity atual e retorna à tela anterior
+            finish()
         }
 
         // 1. Pega o ID enviado pela MainActivity

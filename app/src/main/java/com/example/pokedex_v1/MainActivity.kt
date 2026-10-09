@@ -29,11 +29,14 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        //pega o componente recyclerview
         val rvPokemons = findViewById<RecyclerView>(R.id.rvPokemon)
         rvPokemons.layoutManager = LinearLayoutManager(this)
 
+        //pega a lista de mocks de pokemons
         val pokemons = PokemonRepository.getPokemons()
 
+        //Entrega a lista de Pokémon para o Adapter, que pega os dados e monta a interface visual de cada item.
         rvPokemons.adapter = PokemonAdapter(pokemons) { pokemonClicado ->
             val intent = Intent(this, DetailActivity::class.java).apply {
                 putExtra("POKEMON_ID", pokemonClicado.id)
@@ -49,6 +52,7 @@ class PokemonAdapter(
     private val onItemClick: (Pokemon) -> Unit
 ) : RecyclerView.Adapter<PokemonAdapter.PokemonViewHolder>() {
 
+    //Mapeia e guarda as referências dos componentes visuais do XML
     class PokemonViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val imgPokemon: ImageView = view.findViewById(R.id.img)
         val txtNumber: TextView = view.findViewById(R.id.number)
@@ -56,12 +60,14 @@ class PokemonAdapter(
         val txtType: TextView = view.findViewById(R.id.type)
     }
 
+
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PokemonViewHolder {
             val view = LayoutInflater.from(parent.context)
                 .inflate(R.layout.item_pokemon, parent, false)
             return PokemonViewHolder(view)
         }
 
+        //Pega os dados do Pokémon e preenche os campos do card.
         override fun onBindViewHolder(holder: PokemonViewHolder, position: Int) {
             val pokemon = pokemonList[position]
 
@@ -75,5 +81,7 @@ class PokemonAdapter(
             }
         }
 
+
+    //Informa ao Android quantas linhas/itens a lista possui no total.
     override fun getItemCount(): Int = pokemonList.size
 }
