@@ -29,7 +29,7 @@ Siga o passo a passo abaixo para baixar ou clonar e executar o aplicativo na sua
 
 ## Opção A: Baixando o arquivo ZIP
 
-1. No topo desta página do GitHub, clique no botão verde "< > Code" e depois em "Download ZIP".
+1. No topo da página do GitHub, clique no botão verde "< > Code" e depois em "Download ZIP".
 2. Extraia o arquivo ".zip" baixado em uma pasta do seu computador.
 3. Abra o Android Studio.
 4. Clique em *Open* (ou *File > Open*) e selecione a pasta que você acabou de extrair.
@@ -38,5 +38,11 @@ Siga o passo a passo abaixo para baixar ou clonar e executar o aplicativo na sua
 
 
 ## Opção B: Clonando via Git terminal
+
+1. No topo da página do GitHub, clique no botão verde "< > Code" Na aba HTTPS, copie o link https://github.com/JoaoPedroPaschoalini/Pokedex_v1
+2. Abra o Prompt de Comando e execute o comando
    ```bash
    git clone https://github.com/JoaoPedroPaschoalini/Pokedex_v1.git
+3. Abra o Android Studio e na tela inicial (Welcome to Android Studio), clique em Open (ou no menu superior: File > Open),
+   Navegue até a pasta onde você clonou o repositório e selecione a pasta do projeto,
+   certifique-se de selecionar a pasta que possui o build.gradle (ou build.gradle.kts) e clique em OK / Open.
