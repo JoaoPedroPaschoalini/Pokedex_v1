@@ -39,4 +39,4 @@ Siga o passo a passo abaixo para baixar ou clonar e executar o aplicativo na sua
 
 ## Opção B: Clonando via Git terminal
    ```bash
-   git clone [https://github.com/JoaoPedroPaschoalini/Pokedex_v1.git](https://github.com/JoaoPedroPaschoalini/Pokedex_v1.git)
+   git clone (https://github.com/JoaoPedroPaschoalini/Pokedex_v1.git)
